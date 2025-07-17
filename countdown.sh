@@ -3,24 +3,28 @@
 # title
 echo -e "\n~~ Countdown Timer ~~\n"
 
-if [[ $1 -gt 0 ]]
+# Obtain the countdown number from the user
+echo "Enter a number for countdown: "
+read COUNT
+echo
+echo "Countdown starting from $COUNT..."
+
+if [[ $COUNT -gt 0 ]]
 then
   # countdown with FOR loop commented out
   : '
-  for (( i = $1; i >= 0; i-- ))
+  for (( i = $COUNT; i >= 0; i-- ))
   do
     echo $i
     sleep 1
-
   done
   '
 
   # countdown with WHILE loop
-  I=$1
-  while [[ $I -ge 0 ]]
+  while [[ $COUNT -ge 0 ]]
   do
-    echo $I
-    (( I-- ))
+    echo $COUNT
+    (( COUNT-- ))
     sleep 1
   done
 else

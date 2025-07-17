@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Program that asks three written questions and responds to the user
 # title
 echo -e "\n~~ Questionnaire ~~\n"
 
